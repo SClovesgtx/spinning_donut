@@ -16,7 +16,7 @@ release: clean
 release: $(BIN)
 
 $(BIN): $(OBJS)
-	$(CC) $(CFLAGS) $^ -o $@ 
+	$(CC) $(CFLAGS) $^ -o $@ -lm
 
 $(OBJ)/%.o: $(SRC)/%.c
 	$(CC) $(CFLAGS) -c $< -o $@
